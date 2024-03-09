@@ -1,0 +1,27 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  #fire {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255,165,0,1) 0%, rgba(255,0,0,1) 70%, rgba(0,0,0,1) 100%);
+    border-radius: 50%;
+    animation: flicker 1s infinite alternate;
+  }
+  
+  @keyframes flicker {
+    0% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.8;
+    }
+  }
+  

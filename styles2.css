@@ -1,0 +1,33 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: black;
+}
+
+#fire {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url('fire.png'); /* Image source: https://pixabay.com/vectors/fire-flame-burn-background-hot-37620/ */
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none; /* Allows the cursor to interact with elements behind the fire */
+  animation: flicker 0.1s infinite alternate;
+  filter: blur(01px); /* creates a blurry effect to the image of flame */
+  }
+
+@keyframes flicker {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+}
